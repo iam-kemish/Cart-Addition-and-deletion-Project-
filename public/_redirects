@@ -1,0 +1,9 @@
+# Set MIME types for common file types
+*.js    application/javascript
+*.css   text/css
+*.json  application/json
+*.png   image/png
+*.jpg   image/jpeg
+*.svg   image/svg+xml
+*.woff  application/font-woff
+*.woff2 application/font-woff2

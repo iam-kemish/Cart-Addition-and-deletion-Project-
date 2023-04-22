@@ -1,6 +1,7 @@
 import  { useContext } from 'react'
 import { items } from '../Context'
 
+// eslint-disable-next-line react/prop-types
 const RenderProducts = ({prod}) => {
    const { cart, setCart} = useContext(items)
   return (

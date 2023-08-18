@@ -10,9 +10,7 @@ const Carts = () => {
     setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
   }, [cart]);
 
-  const handleRemove = (prod) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== prod.id))
-  };
+  
 
   if (!cart || cart.length === 0) {
     return (
@@ -36,9 +34,9 @@ const Carts = () => {
       <div className="row my-3">
         {cart.map((prod, index) => (
           <div className="col-md-4 mb-4" key={prod.id + index}>
-            <RenderProducts prod={prod} />
+            <RenderProducts prod={prod} removeBtn = {true} />
          
-            <button onClick={() => handleRemove(prod)}>Remove from cart</button>
+           
           </div>
         ))}
       </div>

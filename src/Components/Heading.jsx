@@ -1,40 +1,25 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-const Heading = () => {
+const Heading = ({ notified }) => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-info p-3">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link  to="/" style={{textDecoration: "none", color: "black"}}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link  to="/cart" style={{textDecoration: "none", color: "black", paddingLeft: "10px"}}>
-                  Carts
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      {/* flex justify-start bg-red-500 text-stone-50 px-4 py-4  */}
+      <ul className="flex justify-start bg-red-500 text-stone-50 px-4 py-4 sm:py-8 fixed top-0 w-full sm:text-2xl">
+        <li>
+          <Link to="/" className="ml-4 hover:text-blue-950 active:text-red-600">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/cart" className="ml-4 hover:text-blue-950 active:text-red-600">
+            Carts
+          </Link>
+        </li>
+        <li>
+          <p>{notified}</p>
+        </li>
+      </ul>
     </div>
   );
 };
